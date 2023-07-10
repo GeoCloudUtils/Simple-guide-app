@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df91ad106cf27ea4e819d52661b195e5, type: 3}
+  m_Name: Guide
+  m_EditorClassIdentifier: 
+  _englishData:
+  - EntryText: xxxxxxxxx
+    DetailsText: Some english text 1
+  - EntryText: xxxxxxxxx
+    DetailsText: Some english text 2
+  - EntryText: xxxxxxxxx
+    DetailsText: Some english text 3
+  - EntryText: xxxxxxxxx
+    DetailsText: Some english text 4
+  - EntryText: xxxxxxxxx
+    DetailsText: Some english text 5
+  - EntryText: some new
+    DetailsText: Some english text 5
+  _spanishData:
+  - EntryText: zzzzzzzzzzz
+    DetailsText: Spanish detail 1
+  - EntryText: zzzzzzzzzzz
+    DetailsText: Spanish detail 2
+  - EntryText: zzzzzzzzzzz
+    DetailsText: Spanish detail 3
+  - EntryText: zzzzzzzzzzz
+    DetailsText: Spanish detail 4
