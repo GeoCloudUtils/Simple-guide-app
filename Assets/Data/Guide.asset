@@ -12,25 +12,82 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df91ad106cf27ea4e819d52661b195e5, type: 3}
   m_Name: Guide
   m_EditorClassIdentifier: 
-  _englishData:
-  - EntryText: xxxxxxxxx
-    DetailsText: Some english text 1
-  - EntryText: xxxxxxxxx
-    DetailsText: Some english text 2
-  - EntryText: xxxxxxxxx
-    DetailsText: Some english text 3
-  - EntryText: xxxxxxxxx
-    DetailsText: Some english text 4
-  - EntryText: xxxxxxxxx
-    DetailsText: Some english text 5
-  - EntryText: some new
-    DetailsText: Some english text 5
-  _spanishData:
-  - EntryText: zzzzzzzzzzz
-    DetailsText: Spanish detail 1
-  - EntryText: zzzzzzzzzzz
-    DetailsText: Spanish detail 2
-  - EntryText: zzzzzzzzzzz
-    DetailsText: Spanish detail 3
-  - EntryText: zzzzzzzzzzz
-    DetailsText: Spanish detail 4
+  _guides:
+  - Type: 0
+    Data:
+    - Language: 0
+      GuideList:
+      - EntryText: items english
+        DetailsText: Description
+      - EntryText: items english
+        DetailsText: XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+      - EntryText: items english
+        DetailsText: XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    - Language: 1
+      GuideList:
+      - EntryText: items spanish
+        DetailsText: ZZZZZZZZZZZZZZZZZZZZZZZ
+      - EntryText: items spanish
+        DetailsText: ZZZZZZZZZZZZZZZZZZZZZZZZZZ
+      - EntryText: items spanish
+        DetailsText: ZZZZZZZZZZZZZZZZZZZZZZ
+  - Type: 1
+    Data:
+    - Language: 0
+      GuideList:
+      - EntryText: tips english
+        DetailsText: XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+      - EntryText: tips english
+        DetailsText: XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+      - EntryText: tips english
+        DetailsText: XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    - Language: 1
+      GuideList:
+      - EntryText: tips spanish
+        DetailsText: ZZZZZZZZZZZZZZZZZZZZZZZ
+      - EntryText: tips spanish
+        DetailsText: ZZZZZZZZZZZZZZZZZZZZZZZZZZ
+      - EntryText: tips spanish
+        DetailsText: ZZZZZZZZZZZZZZZZZZZZZZ
+  - Type: 2
+    Data:
+    - Language: 0
+      GuideList:
+      - EntryText: weapons english
+        DetailsText: XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+      - EntryText: weapons english
+        DetailsText: XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+      - EntryText: weapons english
+        DetailsText: XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    - Language: 1
+      GuideList:
+      - EntryText: weapons spanish
+        DetailsText: ZZZZZZZZZZZZZZZZZZZZZZZ
+      - EntryText: weapons spanish
+        DetailsText: ZZZZZZZZZZZZZZZZZZZZZZZZZZ
+      - EntryText: weapons spanish
+        DetailsText: ZZZZZZZZZZZZZZZZZZZZZZ
+  - Type: 3
+    Data:
+    - Language: 0
+      GuideList:
+      - EntryText: locations english
+        DetailsText: XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+      - EntryText: locations english
+        DetailsText: XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+      - EntryText: locations english
+        DetailsText: XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+      - EntryText: locations english
+        DetailsText: XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+      - EntryText: locations english
+        DetailsText: XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    - Language: 1
+      GuideList:
+      - EntryText: locations spanish
+        DetailsText: ZZZZZZZZZZZZZZZZZZZZZZZ
+      - EntryText: locations spanish
+        DetailsText: ZZZZZZZZZZZZZZZZZZZZZZZZZZ
+      - EntryText: locations spanish
+        DetailsText: ZZZZZZZZZZZZZZZZZZZZZZ
+      - EntryText: locations spanish
+        DetailsText: ZZZZZZZZZZZZZZZZZZZZZZ

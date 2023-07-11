@@ -1,22 +1,21 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
-public enum Language
-{
-    ENGLISH,
-    SPANISH
-}
-
-public class MainController : MonoBehaviour
+public class UIListScreen : UIScreen
 {
     [SerializeField] private Transform _entrySpawnTransform;
 
-    [SerializeField] private UIAbstractScreen _detailedView;
+    [SerializeField] private UIScreen _detailedView;
+
+    [SerializeField] private Button _closeButton;
+
+    [SerializeField] private UIScreen _uiMainScreen;
 
     [SerializeField] private TMP_Dropdown _dropdown;
 
-    [SerializeField] private Guide _guideData;
+    [SerializeField] private Guide _guideController;
 
     [SerializeField] private GuideEntry _entryInstance;
 
@@ -25,7 +24,7 @@ public class MainController : MonoBehaviour
     private void Start()
     {
         _dropdown.onValueChanged.AddListener(LanguageChanged);
-        LanguageChanged(0);
+        _closeButton.onClick.AddListener(Hide);
     }
 
     private void LanguageChanged(int index)
@@ -45,7 +44,12 @@ public class MainController : MonoBehaviour
 
     private void DisplayContent(Language language)
     {
-        List<GuideData> selectedGuideData = GetSelectedGuideData(language);
+        List<GuideData> selectedGuideData = _guideController.GetGuideDataByType(UIMainScreen.SelectedGuideType, language);
+        if (selectedGuideData == null)
+        {
+            Debug.LogError("Can't find guide of type: " + UIMainScreen.SelectedGuideType);
+            return;
+        }
         foreach (GuideData data in selectedGuideData)
         {
             GuideEntry entry = Instantiate(_entryInstance, _entrySpawnTransform);
@@ -57,13 +61,21 @@ public class MainController : MonoBehaviour
         }
     }
 
-    private List<GuideData> GetSelectedGuideData(Language language)
-    {
-        return language == Language.ENGLISH ? _guideData.EnglishData : _guideData.SpanishData;
-    }
-
     private void EntryClick(string text)
     {
         _detailedView.Show(text);
+    }
+
+    public override void Hide()
+    {
+        _uiMainScreen.Show();
+        base.Hide();
+    }
+
+    public override void Show(string text = null)
+    {
+        _dropdown.value = 0;
+        LanguageChanged(0);
+        base.Show(text);
     }
 }

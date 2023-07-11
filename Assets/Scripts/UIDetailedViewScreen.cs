@@ -2,7 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DetailedViewManager : UIAbstractScreen
+public class UIDetailedViewScreen : UIScreen
 {
     [SerializeField] private Button _closeButton;
 

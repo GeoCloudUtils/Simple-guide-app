@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class UIAbstractScreen : MonoBehaviour
+public class UIScreen : MonoBehaviour
 {
     [SerializeField] private GameObject _root;
 
